@@ -1,0 +1,6 @@
+[submodule "References/ptt-web-crawler"]
+	path = References/ptt-web-crawler
+	url = https://github.com/jwlin/ptt-web-crawler.git
+[submodule "References/web-crawler-tutorial"]
+	path = References/web-crawler-tutorial
+	url = https://github.com/jwlin/web-crawler-tutorial.git
