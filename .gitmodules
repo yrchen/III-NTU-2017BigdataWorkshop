@@ -4,3 +4,6 @@
 [submodule "References/web-crawler-tutorial"]
 	path = References/web-crawler-tutorial
 	url = https://github.com/jwlin/web-crawler-tutorial.git
+[submodule "References/dataviz-with-python-and-js"]
+	path = References/dataviz-with-python-and-js
+	url = https://github.com/Kyrand/dataviz-with-python-and-js.git
