@@ -100,3 +100,6 @@ ENV/
 
 # PyCharm
 .idea/
+
+# SQLite Database File
+*.sqlite
