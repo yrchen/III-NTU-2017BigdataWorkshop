@@ -1,2 +1,2 @@
 # 排除 crawler 產生的結果 JSON 檔案
-*.json
+*/*.json
