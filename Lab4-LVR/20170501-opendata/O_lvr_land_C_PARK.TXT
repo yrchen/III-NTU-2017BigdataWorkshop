@@ -1,0 +1,3 @@
+編號,車位類別,車位價格,車位面積平方公尺
+RPTNMLNJNHMFFAO56CC,坡道平面,0,
+RPXOMLLKNHMFFAO96CC,坡道平面,0,34.91

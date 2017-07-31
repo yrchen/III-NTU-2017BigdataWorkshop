@@ -1,0 +1,52 @@
+編號,土地區段位置,土地移轉面積平方公尺,使用分區或編定
+RPUSMLLJNHMFFBH98DB,山嶺段,121.38,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPUSMLLJNHMFFBH98DB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPUSMLLJNHMFFBH98DB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPOTMLLJNHMFFBH48DB,山嶺段,109.00,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPOTMLLJNHMFFBH48DB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPOTMLLJNHMFFBH48DB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPRTMLLJNHMFFBH78DB,山嶺段,109.33,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPRTMLLJNHMFFBH78DB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPRTMLLJNHMFFBH78DB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPRUMLLJNHMFFBH88DB,山嶺段,130.92,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPRUMLLJNHMFFBH88DB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPRUMLLJNHMFFBH88DB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPQQMLLJNHMFFBH28CB,山嶺段,109.29,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPQQMLLJNHMFFBH28CB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPQQMLLJNHMFFBH28CB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPTPMLSJNHMFFBH66DB,山嶺段,121.38,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPTPMLSJNHMFFBH66DB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPTPMLSJNHMFFBH66DB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPUPMLSJNHMFFBH76DB,山嶺段,109.00,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPUPMLSJNHMFFBH76DB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPUPMLSJNHMFFBH76DB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPVPMLSJNHMFFBH86DB,山嶺段,109.33,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPVPMLSJNHMFFBH86DB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPVPMLSJNHMFFBH86DB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPWPMLSJNHMFFBH96DB,山嶺段,130.92,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPWPMLSJNHMFFBH96DB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPWPMLSJNHMFFBH96DB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPXPMLSJNHMFFBH07DB,山嶺段,113.82,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPXPMLSJNHMFFBH07DB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPXPMLSJNHMFFBH07DB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPOQMLSJNHMFFBH88DB,山嶺段,129.18,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPOQMLSJNHMFFBH88DB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPOQMLSJNHMFFBH88DB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPPQMLSJNHMFFBH98DB,山嶺段,128.26,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPPQMLSJNHMFFBH98DB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPPQMLSJNHMFFBH98DB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPQQMLSJNHMFFBH09DB,山嶺段,122.00,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPQQMLSJNHMFFBH09DB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPQQMLSJNHMFFBH09DB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPUQMLSJNHMFFBH86DB,山嶺段,134.00,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPUQMLSJNHMFFBH86DB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPUQMLSJNHMFFBH86DB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPXQMLSJNHMFFBH17DB,山嶺段,113.85,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPXQMLSJNHMFFBH17DB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPXQMLSJNHMFFBH17DB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPPRMLSJNHMFFBH09DB,山嶺段,118.96,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPPRMLSJNHMFFBH09DB,山嶺段,4.50,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPPRMLSJNHMFFBH09DB,山嶺段,25.09,非都市：特定農業區 ; 非都市編定：甲種建築用地
+RPXNMLLKNHMFFHH76CB,公華段,27.30,都市：住
+RPPOMLLKNHMFFHH68CB,公華段,27.30,都市：住
+RPROMLLKNHMFFHH88CB,公華段,27.30,都市：住

@@ -1,0 +1,13 @@
+-r ../requirements.txt
+
+# Share packages
+argparse
+beautifulsoup4
+requests
+six
+
+# Lab1-PttCrawler
+requests-cache
+
+# Lab1-UBike
+urllib
