@@ -1,0 +1,4 @@
+-r ../requirements.txt
+
+# Lab3
+numpy
