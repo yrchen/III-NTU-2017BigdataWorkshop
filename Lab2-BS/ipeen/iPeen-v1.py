@@ -14,12 +14,19 @@ from bs4 import BeautifulSoup
 import HTMLParser
 from IPython.display import clear_output
 import requests
+import requests_cache
+
+# 啟用 requests_cache 加速 requests 存取
+# https://pypi.python.org/pypi/requests-cache
+# https://requests-cache.readthedocs.io/en/latest/
+requests_cache.install_cache()
 
 # 定義最多抓取幾頁的資訊
-MAX_PAGE = 2
+MAX_PAGE = 1
 
 # 定義是否要休息一下
-SLEEP = False
+SLEEP = True
+SLEEP_DURATION = 10
 
 # 從搜尋頁面擷取店家網址
 links = ['http://www.ipeen.com.tw/search/all/000/1-100-0-0/?p=' + str(i+1) + '&adkw=台大' for i in range(MAX_PAGE)]
@@ -27,35 +34,52 @@ shop_links = []
 
 # 產生店家資訊列表
 for i, link in enumerate(links):
-    print "Parsing Search Page %s " % (str(i + 1))
+    print "Parsing Search Page No. %s" % (str(i + 1))
+
+    # 避免被擋掉，先隨機睡一下
+    if SLEEP:
+        print "Sleeping... zZZ"
+        time.sleep(randint(1, SLEEP_DURATION))
+
     res = requests.get(link)
-    soup = BeautifulSoup(res.text.encode("utf-8"), 'lxml')
+    soup = BeautifulSoup(res.text.encode("utf-8"), 'html.parser')
     shop_table = soup.findAll(
         'h3', {
             'class': 'name'
         }
     )
-    ##關在a tag裡的網址抓出來
+    # 把藏在 <a> tag 裡的網址抓出來
     for shop_link in shop_table:
         link = 'http://www.ipeen.com.tw' + [tag['href'] for tag in shop_link.findAll('a', {'href': True})][0]
         shop_links.append(link)
 
-        # 避免被擋掉，小睡一會兒
-        if SLEEP:
-            print "Sleeping... zZZ"
-            time.sleep(1)
-
-##建立變項檔案的header
-title  = "shop" + "," + "category" + "," + "tel" + "," + "addr" + "," + "cost" + "," + "rank" + "," + "ratingCount" + "," + "share" + "," + "collect"
-shop_list = open('shop_list.txt','w')
-##先把header寫進去
+# 建立結果檔案的 header
+title = (
+    "Shop" + "," +
+    "Category" + "," +
+    "Tel" + "," +
+    "Addr" + "," +
+    "Cost" + "," +
+    "Rank" + "," +
+    "RatingCount" + "," +
+    "Share" + "," +
+    "Collect"
+)
+shop_list = open('shop_list.csv','w')
+# 先寫入結果檔案 header
 shop_list.write(title.encode('utf-8') + "\n")
 
 # 依序存取個別店家資訊頁面
 for i in range(len(shop_links)):
     print "Analysing Shop No. %s" % (str(i + 1))
+
+    # 避免被擋掉，先隨機睡一下
+    if SLEEP:
+        print "Sleeping first... "
+        time.sleep(randint(1, SLEEP_DURATION))
+
     res = requests.get(shop_links[i])
-    soup = BeautifulSoup(res.text.encode("utf-8"), 'lxml')
+    soup = BeautifulSoup(res.text.encode("utf-8"), 'html.parser')
 
     # 取出店家全部資訊
     header = soup.find(
@@ -163,24 +187,19 @@ for i in range(len(shop_links)):
 
     # 取出店家瀏覽人數
     try:
-        share = header.find_all('em')[1].string.replace(',','')
+        share = header.find_all('em')[1].string.replace(',', '')
     except Exception as e:
         share = ""
 
     # 取出店家收藏人數
     try:
-        collect = header.find_all('em')[2].string.replace(',','')
+        collect = header.find_all('em')[2].string.replace(',', '')
     except Exception as e:
         collect = ""
 
     ##串起來用逗號分格（應該有更好的方法，但是先將就用用）
     result = shop + "," + category + "," + tel + "," + addr + "," + cost + "," + rank + "," + ratingCount + "," + share + "," + collect
     shop_list.write(result.encode('utf-8') + "\n")
-
-    # 隨機睡一下
-    if SLEEP:
-        print "Sleeping... "
-        time.sleep(randint(1, 5))
 
     clear_output()
     sys.stdout.flush()
