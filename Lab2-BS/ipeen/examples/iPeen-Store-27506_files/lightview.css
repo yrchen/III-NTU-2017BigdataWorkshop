@@ -1,0 +1,50 @@
+/* NEVER add 'padding' property on .lightview-box element in CSS file! */
+.lightview-box {
+  background: white;
+  -webkit-border-radius: 4px; /* Saf3-4, iOS 1-3.2, Android ≤1.6 */
+          border-radius: 4px; /* Opera 10.5, IE9, Saf5, Chrome, FF4+, iOS 4, Android 2.1+ */
+}
+.lightview-scene.loading {
+  background: url(lightview-loading.gif) no-repeat 50% 50%;
+}
+.lightview-scene {
+  text-align: center;
+}
+.lightview-scene img {
+  margin: 0 auto;
+}
+.lightview-prev {
+  background: url(lightview-prev.png) no-repeat 0% 50%;
+/*  opacity: .4;*/
+  left: 0;
+}
+.lightview-next {
+  background: url(lightview-next.png) no-repeat 100% 50%;
+/*  opacity: .4;*/
+  right: 0;
+}
+
+.lightview-prev,
+.lightview-next {
+  position: absolute;
+  top: 0;
+}
+.lightview-prev.disabled,
+.lightview-next.disabled {
+  cursor: default;
+  background: none !important;
+}
+
+.lightview-close {
+  position: absolute;
+  top: -2px;
+  right: -29px;
+  width: 24px;
+  height: 24px;
+  background: black url(lightview-close.png) no-repeat center center;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+}
+.my-layout-classname-for-css{
+	font-size:13px;
+}

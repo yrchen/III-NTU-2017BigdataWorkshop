@@ -1,0 +1,103 @@
+.pages_area {
+	padding-top:15px;
+	padding-bottom:20px;
+}
+.gray_bgc_a {
+	background-image: url(../../images/v2/focus/pagearea.jpg);
+	background-repeat: no-repeat;
+	height: 24px;
+	width: 670px;
+	padding-top: 12px;
+}
+.next_p_one {
+	padding-right: 5px;
+}
+.page_nons_area {
+	float: right;
+	padding-right: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 15px;
+	color:#808080;
+}
+
+.page_nons_area A:link { color:#808080;text-decoration:underline; padding-left:2px; padding-right:2px; } 
+.page_nons_area A:visited { color:#808080;text-decoration:underline; padding-left:2px; padding-right:2px; } 
+.page_nons_area A:hover { color:#0066BF; text-decoration:underline; padding-left:2px; padding-right:2px; }
+.page_on_click {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #4F4F4F;
+}
+.front_page_area {
+	float: right;
+	padding-top: 1px;
+}
+
+.next_page_area {
+	float: right;
+	padding-right: 40px;
+	padding-top: 1px;
+}
+.front_page_area a, .next_page_area a,
+.front_page_area a:hover, .next_page_area a:hover,
+.front_page_area a:focus, .next_page_area a:focus{
+text-decoration:none;}
+/* old style page*/
+.Page {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+.PageNo {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #004ea6;
+	padding-left: 3px;
+	padding-right: 3px;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.FrontPage {
+	height: 22px;
+	width: 68px;
+	cursor: pointer;
+}
+
+.NextPage {
+	height: 22px;
+	width: 68px;
+	cursor: pointer;
+	margin-right: 5px;
+}
+.Subjectstyle {
+	float: left;
+	width: 360px;
+	padding-left: 6px;
+}
+
+.SelectPageFont {
+	font-size: 12px;
+	color: #000000;
+}
+.SelectPage {
+	float: left;
+}
+.PageRight {
+	float: left;
+	margin-left: 15px;
+	margin-right: 10px;
+	vertical-align: top;
+	padding-top: 5px;
+}
+/* old style page*/
+
+/*new page¸m¤¤*/
+
+.dis_page{ text-align:center; font-size:12px; }
+.dis_page a{ text-decoration:none; color:#808080; font-weight:bold;}
+.dis_page a.select{ color:#4F4F4F; font-size:13px;}

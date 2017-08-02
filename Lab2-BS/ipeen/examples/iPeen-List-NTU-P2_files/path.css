@@ -1,0 +1,97 @@
+div#path{
+	width: 100%;
+	font-size: 13px;
+	clear: both;
+	padding-left: 6px;
+
+}
+
+.LinksPath{
+	float: left;
+	vertical-align: middle;
+	color: #004ea6;
+	margin-top: 12px;
+	cursor: pointer;
+	margin-left: 4px;
+	text-decoration:none;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.LinksSep{
+	float: left;
+	vertical-align: middle;
+	color: #808080;
+	margin-top: 12px;
+	margin-left: 4px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.new_path {
+	font-size: 12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color: #666666;
+	line-height:20px;
+	padding-top: 4px;
+	padding-right: 4px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+
+}
+
+.new_path a { color:#808080;text-decoration:underline; }
+.new_path a:hover { color:#0066BF; text-decoration:underline; }
+.nwp {
+	padding-left: 0;
+	position: relative;
+}
+.bradCrumbsList {
+	position: absolute;
+	top: 1.7em;
+	left: -1px;
+	right: -1px;
+	border: 1px solid #dedede;
+	z-index: 5;
+	background: #fff;
+	overflow-y: auto;
+	max-height: 176px; 
+	box-shadow: 0 1px 2px 1px #f2f2f2;
+}
+.bradCrumbsList ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.bradCrumbsList li {
+	white-space: nowrap;
+	padding: 1px 5px;
+}
+.bradCrumbsList li:hover {
+	background: #f2f2f2;
+}
+.bradCrumbsList li a {
+	display: block;
+}
+.bradCrumbsList li a:link {
+	text-decoration: none;
+}
+.nwp.selector {
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #dedede;
+	padding: 0 5px;
+	border-radius: 2px;
+	cursor: pointer;
+	background: url(/images/v2/hp/header/pathSelector.png) 100% 0 no-repeat;
+}
+.nwp.selector:hover {
+	border-color: #ccc;
+}
+#breadCrumbsChnl {
+	width: 66px;
+}
+#breadCrumbsCity {
+	width: 60px;
+}
+#breadCrumbsCate1 {
+	width: 115px;
+}

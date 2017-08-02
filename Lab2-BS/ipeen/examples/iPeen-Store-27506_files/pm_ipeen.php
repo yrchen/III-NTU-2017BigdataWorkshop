@@ -1,0 +1,1 @@
+pm_datainfo({"cy_pc3":"27","cy_pc4":"55","cy_device":"0","cy_referrer":"http:\/\/www.ipeen.com.tw\/search\/all\/000\/0-100-0-0\/?adkw=\u53f0\u5927"});

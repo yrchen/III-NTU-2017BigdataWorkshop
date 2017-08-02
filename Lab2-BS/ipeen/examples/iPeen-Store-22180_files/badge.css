@@ -1,0 +1,93 @@
+/*獲得徽章*/
+.getDadge {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.getBlack {
+  height: 120px;
+  background: #000;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  position: relative;
+  z-index: 5;
+}
+
+.getWhole {
+  width: 700px;
+  margin: 0 auto -100px auto;
+  position: relative;
+  z-index: 8;
+}
+
+.getMask {
+  text-align: center;
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.getItem {
+  display: inline;
+}
+
+.getInner {
+  display: inline-block;
+  color: #FFF;
+  margin: 0 15px;
+}
+
+.getItem strong {
+  display: block;
+  color: #FFFF00;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.getItem .getNum {
+  display: block;
+  color: #FFF;
+  font-size: 12px;
+}
+
+.getItem em {
+  color: #FF6600;
+  font-style: normal;
+}
+
+.getClose {
+  display: block;
+  width: 35px;
+  height: 51px;
+  background: url(/images/v2/badge/btnClose.png) no-repeat;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  bottom: 70px;
+}
+
+.getClose:hover, .getControl:hover {
+  background-position: bottom;
+}
+
+.getControl {
+  display: block;
+  width: 36px;
+  height: 60px;
+  position: absolute;
+  bottom: 120px;
+}
+
+.goLeft {
+  background: url(/images/v2/badge/arrowLeft.png) no-repeat;
+  left: 10px;
+}
+
+.goRight {
+  background: url(/images/v2/badge/arrowRight.png) no-repeat;
+  right: 10px;
+}
