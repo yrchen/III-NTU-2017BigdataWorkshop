@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 #
-# yrchen.170731: 修改自
-# https://gist.github.com/jwlin/d9574ef1f4191a7d823fb9467d599d90
+# deeperlearner: 修改自
+# https://github.com/yrchen/III-NTU-2017BigdataWorkshop/blob/master/Lab3/hahow_crawler-v1.py
 #
 
 from io import open # 為了支援 Python3 style 的 open
@@ -14,9 +14,6 @@ import numpy as np
 import requests
 import requests_cache
 
-# 啟用 requests_cache 加速 requests 存取
-# https://pypi.python.org/pypi/requests-cache
-# https://requests-cache.readthedocs.io/en/latest/
 requests_cache.install_cache()
 
 category = {
@@ -76,12 +73,6 @@ if __name__ == '__main__':
 
     # 取出程式類課程的募資價/上線價/學生數，並顯示統計資料
 
-
-
-    #print courses
-    
-    #print c
-    #if '55de81ac9d1fa51000f94770' in c['categories']:
     for i in category:
         pre_order_prices = list()
         prices = list()
