@@ -74,12 +74,12 @@ if __name__ == '__main__':
     # 取出程式類課程
     #programming_classes = [c for c in courses if '55de81ac9d1fa51000f94770' in c['categories']]
 
-	# 記錄category中出現的順序
+    # 記錄category中出現的順序
     cate_order = list()
     for key in category:
         cate_order.append(key)
     
-	# 宣告二維list，儲存每一種category的資料
+    # 宣告二維list，儲存每一種category的資料
     pre_order_prices = [[] for i in range(len(category))]
     prices = [[] for i in range(len(category))]
     tickets = [[] for i in range(len(category))]
@@ -96,7 +96,7 @@ if __name__ == '__main__':
             tickets[cate_idx].append(c['numSoldTickets'])
             lengths[cate_idx].append(c['totalVideoLengthInSeconds'])
     
-	# print出每一種category的詳細資料
+    # print出每一種category的詳細資料
     for key in category:
         cate_idx = cate_order.index(key)
         print(u'%s 類課程共有 %d 堂' % (category[key], len(prices[cate_idx])))
