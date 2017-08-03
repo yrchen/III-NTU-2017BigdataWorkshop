@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 #
-# yrchen.170731: 修改自
-# https://gist.github.com/jwlin/d9574ef1f4191a7d823fb9467d599d90
+# deeperlearner: 修改自
+# https://github.com/yrchen/III-NTU-2017BigdataWorkshop/blob/master/Lab3/hahow_crawler-v1.py
 #
 
 from io import open # 為了支援 Python3 style 的 open
@@ -12,7 +12,9 @@ import time
 
 import numpy as np
 import requests
+import requests_cache
 
+requests_cache.install_cache()
 
 category = {
     '55de818a9d1fa51000f94767': u'生活',
@@ -64,31 +66,33 @@ if __name__ == '__main__':
             courses = json.load(f)
     else:
         courses = crawl()
-    print(u'hahow 共有 %d 堂課程' % len(courses))
+    print(u'hahow 共有 %d 堂課程\n' % len(courses))
 
     # 取出程式類課程
     #programming_classes = [c for c in courses if '55de81ac9d1fa51000f94770' in c['categories']]
 
     # 取出程式類課程的募資價/上線價/學生數，並顯示統計資料
-    pre_order_prices = list()
-    prices = list()
-    tickets = list()
-    lengths = list()
 
-    for c in courses:
-        if '55de81ac9d1fa51000f94770' in c['categories']:
-            pre_order_prices.append(c['preOrderedPrice'])
-            prices.append(c['price'])
-            tickets.append(c['numSoldTickets'])
-            lengths.append(c['totalVideoLengthInSeconds'])
+    for i in category:
+        pre_order_prices = list()
+        prices = list()
+        tickets = list()
+        lengths = list()
+        for c in courses:
+            if i in c['categories']:
+                pre_order_prices.append(c['preOrderedPrice'])
+                prices.append(c['price'])
+                tickets.append(c['numSoldTickets'])
+                lengths.append(c['totalVideoLengthInSeconds'])
 
-    print(u'%s 類課程共有 %d 堂' % (category['55de81ac9d1fa51000f94770'], len(prices)))
-    print(u'平均募資價: %s' % np.mean(pre_order_prices))
-    print(u'平均上線價: %s' % np.mean(prices))
-    print(u'平均學生數: %s' % np.mean(tickets))
-    print(u'平均課程分鐘: %s' % (np.mean(lengths)/60))
-    # print(np.corrcoef([tickets, pre_order_prices, prices, length]))
-    corrcoef = np.corrcoef([tickets, pre_order_prices, prices, lengths])
-    print(u'募資價與學生數之相關係數: %s' % corrcoef[0, 1])
-    print(u'上線價與學生數之相關係數: %s' % corrcoef[0, 2])
-    print(u'課程長度與學生數之相關係數: %s' % corrcoef[0, 3])
+        print(u'%s 類課程共有 %d 堂' % (category[i], len(prices)))
+        print(u'平均募資價: %s' % np.mean(pre_order_prices))
+        print(u'平均上線價: %s' % np.mean(prices))
+        print(u'平均學生數: %s' % np.mean(tickets))
+        print(u'平均課程分鐘: %s' % (np.mean(lengths)/60))
+        # print(np.corrcoef([tickets, pre_order_prices, prices, length]))
+        corrcoef = np.corrcoef([tickets, pre_order_prices, prices, lengths])
+        print(u'募資價與學生數之相關係數: %s' % corrcoef[0, 1])
+        print(u'上線價與學生數之相關係數: %s' % corrcoef[0, 2])
+        print(u'課程長度與學生數之相關係數: %s' % corrcoef[0, 3])
+        print('\n')
