@@ -12,9 +12,15 @@ import time
 
 import numpy as np
 import requests
+import requests_cache
 
 
-category = {
+# 啟用 requests_cache 加速 requests 存取
+# https://pypi.python.org/pypi/requests-cache
+# https://requests-cache.readthedocs.io/en/latest/
+requests_cache.install_cache()
+
+course_categories = {
     '55de818a9d1fa51000f94767': u'生活',
     '55de818d9d1fa51000f94768': u'藝術',
     '55de819a9d1fa51000f9476b': u'運動',
@@ -68,49 +74,41 @@ if __name__ == '__main__':
 
     # 初始化結果
     result = dict()
-
-    for category_key in category.iterkeys():
+    for category_key in course_categories.iterkeys():
         r = dict()
-        pre_order_prices = list()
-        prices = list()
-        tickets = list()
-        lengths = list()
-        r['pre_order_prices'] =  pre_order_prices
-        r['prices'] = prices
-        r['tickets'] = tickets
-        r['lengths'] = lengths
+        r['pre_order_prices'] = list()
+        r['prices'] = list()
+        r['tickets'] = list()
+        r['lengths'] = list()
         result[category_key] = r
-
-    print result
 
     # 統計課程資訊
     for course in courses:
         # 確認課程資料內容正確
         if course['categories']:
-            r = result[course['categories'].pop()]
-            pre_order_prices = r['pre_order_prices']
-            prices = r['prices']
-            tickets = r['tickets']
-            lengths = r['lengths']
-            pre_order_prices.append(course['preOrderedPrice'])
-            prices.append(course['price'])
-            tickets.append(course['numSoldTickets'])
-            lengths.append(course['totalVideoLengthInSeconds'])
+            # 將課程中所有的分類資訊個別統計
+            for category in course['categories']:
+                r = result[category]
+                r['pre_order_prices'].append(course['preOrderedPrice'])
+                r['prices'].append(course['price'])
+                r['tickets'].append(course['numSoldTickets'])
+                r['lengths'].append(course['totalVideoLengthInSeconds'])
 
     # 顯示統計結果
-    for category_key in category.iterkeys():
+    for category_key in course_categories.iterkeys():
         r = result[category_key]
         pre_order_prices = r['pre_order_prices']
         prices = r['prices']
         tickets = r['tickets']
         lengths = r['lengths']
 
-        print(u'「%s」類課程共有 %d 堂' % (category[category_key], len(prices)))
+        print(u'「%s」類課程共有 %d 堂' % (course_categories[category_key], len(prices)))
         print(u'平均募資價: %s' % np.mean(pre_order_prices))
         print(u'平均上線價: %s' % np.mean(prices))
         print(u'平均學生數: %s' % np.mean(tickets))
         print(u'平均課程分鐘: %s' % (np.mean(lengths)/60))
 
+        # 計算相關係數
         corrcoef = np.corrcoef([tickets, pre_order_prices, prices, lengths])
         print(u'募資價與學生數之相關係數: %s' % corrcoef[0, 1])
         print(u'上線價與學生數之相關係數: %s' % corrcoef[0, 2])
